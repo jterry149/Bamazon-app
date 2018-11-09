@@ -1,6 +1,6 @@
 -- Create a database called 'Bamazon'
-CREATE DATABASE Bamazon;
-USE Bamazon;
+CREATE DATABASE bamazon;
+USE bamazon;
 
 -- Create a table called 'products' which will contain the store inventory --
 CREATE TABLE products (
@@ -14,7 +14,8 @@ CREATE TABLE products (
 
 -- Insert data into the 'products' table --
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES  ('Orbea Occam Mountain Bike', 'Outdoors', 1200.00, 30),
-		('Her', 'Cosmetics', 6.25, 627),	
-		('Ben & Jerry Ice Cream', 'Grocery', 3.25, 432);
+VALUES  ('Orbea Occam Mountain Bike', 'Sporting & Outdoors',        1200.00, 30),
+		('Go Pro Hero 7', 'Electronics', 425.00, 627),	
+		('Coleman Campstove', 'Sporting & Outdoors', 89.95, 432),
+        ('Instinct Chicken Dog Food', 'Pet Supplies',56.95, 600);
 

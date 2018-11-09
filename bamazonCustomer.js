@@ -11,20 +11,22 @@ var connection = mysql.createConnection({
 	user: 'root',
 
 	// Your password
-	password: '',
-	database: 'Bamazon'
+	password: 'password',
+	database: 'bamazon'
 });
 
 // validateNumber function will make sure user only uses positive numbers
 function validateNumber(value) 
 {
+    // Declare variables
 	var int = Number.isInteger(parseFloat(value));
 	var sign = Math.sign(value);
 
     if (int && (sign === 1)) 
     {
 		return true;
-	} else {
+    } 
+    else {
 		return 'Please enter a whole number above zero.';
 	}
 }
@@ -114,7 +116,7 @@ function displayInventory()
 {
 
 	
-	// Cnstruct queryStr to grab the products from the bamazon databasel
+	// Construct queryStr to grab the products from the bamazon database
 	queryStr = 'SELECT * FROM products';
 
 	// Make the database query
@@ -131,9 +133,9 @@ function displayInventory()
         // A for loop displaying the products database in a pretty way
 		for (var i = 0; i < data.length; i++) {
 			strOut = '';
-			strOut += 'Item ID: ' + data[i].item_id + '  //  ';
-			strOut += 'Product Name: ' + data[i].product_name + '  //  ';
-			strOut += 'Department: ' + data[i].department_name + '  //  ';
+			strOut += 'Item ID: ' + data[i].item_id + '    \n';
+			strOut += 'Product Name: ' + data[i].product_name + '    \n';
+			strOut += 'Department: ' + data[i].department_name + '   \n';
 			strOut += 'Price: $' + data[i].price + '\n';
 
 			console.log(strOut);
